@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // escopo global
+        var x =10 
+        console.log("x = ", x)
+        
+        {//escopo local
+            console.log("x = ", x)
+            x = 20
+            
+            var y = 30            
+        }
+        
+        console.log("x = ", x)
+        console.log("y = ", y) //usando var, mesmo que declare uma nova variável em um escopo local, ela fica acessível em um escopo global
+
+
+
+        
+
+    </script>
+</body>
+</html>

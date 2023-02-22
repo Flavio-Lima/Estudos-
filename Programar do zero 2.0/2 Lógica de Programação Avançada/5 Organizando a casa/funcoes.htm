@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function soma (a, b){
+            
+            return a + b; 
+        }
+
+        function subitração (a, b){
+            
+            return a - b; 
+        }
+
+        function divisao (a, b){
+            
+            return a / b; 
+        }
+
+        function multiplicacao (a, b){
+            
+            return a * b; 
+        }
+
+        var n1 = Number(prompt("Número 1"))
+        var n2 = Number(prompt("Número 2"))
+        var op = prompt("operação")
+
+        var resultado
+       
+        if (op == "+")
+        {
+            resultado = soma(n1, n2);
+            alert(`O resultado de sua soma é ${resultado}`)
+        }
+        else if( op == "-")
+        {
+            resultado = subitração(n1, n2);
+            alert(`O resultado de sua subitração é ${resultado}`)
+        }
+        else if( op == "*")
+        {
+            resultado = multiplicacao(n1, n2);
+            alert(`O resultado de sua multiplicação é ${resultado}`)
+        }
+        else if( op == "/")
+        {
+            resultado = divisao(n1, n2);
+            alert(`O resultado de sua divisão é ${resultado}`)
+        }
+        else{
+            alert("Desculpe Número ou Operador não reconhecido,")
+        }
+
+    </script>
+</body>
+</html>
