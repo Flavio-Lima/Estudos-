@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .highlight{
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="title">Título da Página</h1>
+    <button id="change-color">Alterar classe</button>
+</body>
+</html>
+
+<script>
+
+const titleEl = document.querySelector("#title")
+
+const buttonEl = document.querySelector("#change-color")
+buttonEl.addEventListener("click", () => {
+   
+    /* 
+    if (titleEl.classList.contains("highlight"))
+    {
+        titleEl.classList.remove("highlight")
+    }
+    else
+    {
+        titleEl.classList.add("highlight")
+    }
+ */
+    //caso queira usar essa funcionalidade que liga e desliga, pode usar o metodo toggle que já fez altomático 
+
+    titleEl.classList.toggle("highlight")
+
+})
+    
+</script>
