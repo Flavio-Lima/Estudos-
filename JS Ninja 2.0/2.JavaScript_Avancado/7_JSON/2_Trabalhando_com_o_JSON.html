@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            name: "Flávio Lima",
+            age: 25,
+            address: {
+                street: "Rua Helio Mai",
+                number: "306",
+                complement: "",
+                district: "Nova Suiça",
+                city: "Nova Friburgo",
+                state: "Rio de Janeiro",
+            },
+        }
+
+        //console.log(person)
+        const personStr = JSON.stringify(person)
+
+        console.log(personStr)
+
+        const personObj = JSON.parse(personStr)
+        console.log(personObj)
+
+    </script>
+</body>
+</html>
