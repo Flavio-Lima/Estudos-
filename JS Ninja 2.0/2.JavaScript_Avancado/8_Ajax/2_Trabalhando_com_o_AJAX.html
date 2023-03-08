@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Recuperar Dados</button>
+    <br/>
+    <br/>
+
+    <script>
+        const loadData = () => {
+            const xhr = new XMLHttpRequest()
+
+            xhr.open("GET", "https://api.github.com/users/Flavio-Lima")
+            xhr.send(null)
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    const resposta = JSON.parse(xhr.responseText)
+                    
+                    const name = resposta.login
+                    const avatarUrl = resposta.avatar_url
+                    const followers = resposta.followers
+                    const repos = resposta.public_repos
+                    //const blogUrl = resposta.blog
+
+                    const avatarEl = document.createElement("img")
+                    avatarEl.setAttribute("src", avatarUrl)
+                    avatarEl.setAttribute("width", "128")
+                    //console.log(avatarEl)
+
+                    const nameEl = document.createElement("h1")
+                    nameEl.innerText = name
+
+                    const followersEl = document.createElement("p")
+                    followersEl.innerText = `Followers: ${followers}`
+
+                    const reposEl = document.createElement("p")
+                    reposEl.innerText = `Repositorys: ${repos}`
+
+                    /* const blogEl = document.createElement("a")
+                    blogEl.setAttribute("href", `https://${blogUrl}`)
+                    blogEl.innerText = blogUrl */
+
+                    document.body.appendChild(avatarEl)
+                    document.body.appendChild(nameEl)
+                    document.body.appendChild(followersEl)
+                    document.body.appendChild(reposEl)
+                }
+            }
+        }
+
+        const buttonEl = document.querySelector("button")
+        buttonEl.addEventListener("click", loadData)
+    </script>
+</body>
+</html>
